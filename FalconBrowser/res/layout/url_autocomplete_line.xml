@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+   Tint Browser for Android
+
+   Copyright (C) 2012 - to infinity and beyond J. Devauchelle and contributors.
+
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU General Public License
+   version 3 as published by the Free Software Foundation.
+
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+ -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:descendantFocusability="blocksDescendants" >
+
+    <ImageView
+        android:id="@+id/AutocompleteImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignBottom="@+id/AutocompleteContainer"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:layout_margin="5dip"
+        android:contentDescription="@string/ContentDescriptionSuggestionIcon" >
+    </ImageView>
+
+    <LinearLayout
+        android:id="@+id/AutocompleteContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/AutoCompleteQueryBuilder"
+        android:layout_toRightOf="@+id/AutocompleteImageView"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/AutocompleteTitle"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dip"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/AutocompleteUrl"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/AutoCompleteQueryBuilder"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/AutocompleteContainer"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center_vertical"
+        android:background="?android:attr/selectableItemBackground"
+        android:contentDescription="@string/ContentDescriptionAutocompleteQueryBuilder"
+        android:focusable="true"
+        android:paddingLeft="8dip"
+        android:paddingRight="8dip"
+        android:src="@drawable/ic_querybuilder" />
+
+</RelativeLayout>

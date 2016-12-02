@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/toolbar_new_tab_bg" android:drawable="@color/new_tab_page_bg" />
+    <item android:id="@+id/toolbar_bg" android:drawable="@drawable/toolbar" />
+</layer-list>

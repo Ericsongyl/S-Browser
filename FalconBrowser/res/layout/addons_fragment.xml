@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+   Tint Browser for Android
+  
+   Copyright (C) 2012 - to infinity and beyond J. Devauchelle and contributors.
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU General Public License
+   version 3 as published by the Free Software Foundation.
+ 
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+ -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/AddonsWarningLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dip"
+            android:layout_marginBottom="5dip"
+            android:text="@string/AddonsWarningText"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/AddonsGetAddons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/AddonsGetAddons"
+            android:layout_marginBottom="8dip"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+        
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:contentDescription="@string/ContentDescriptionDivider"            
+            android:src="#404040" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/AddonsList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/AddonsButtonLayout"
+        android:layout_below="@+id/AddonsWarningLayout" >
+    </ListView>
+    
+    <LinearLayout
+        android:id="@+id/AddonsButtonLayout"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dip"
+        android:layout_marginTop="5dip"
+        android:gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/AddonsDisableAll"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/AddonsDisableAll" />
+
+        <Button
+            android:id="@+id/AddonsEnableAll"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/AddonsEnableAll" />
+
+    </LinearLayout>
+
+</RelativeLayout>

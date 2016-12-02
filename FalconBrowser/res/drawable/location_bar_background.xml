@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <nine-patch android:src="@drawable/textbox" android:dither="false" />
+    </item>
+    <item>
+        <clip android:clipOrientation="horizontal">
+            <shape>
+                <corners android:radius="3.0dip" />
+                <gradient android:startColor="#55426dc9" android:endColor="#556391de" android:angle="90.0" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

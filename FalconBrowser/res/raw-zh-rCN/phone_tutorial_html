@@ -1,0 +1,45 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>上手指南</title>
+	<style>
+		* {
+			font-size: 95%;
+		}
+		body {
+			font-family: sans-serif;
+		}
+		.details {
+			font-size: 90%;
+			background-color: #eee;
+			padding: 1em 1.5em 1em 1.5em;
+			margin: .5em 0 .5em 0;
+		}
+		.center {
+			text-align: center;
+		}
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<h3 class="center">欢迎使用365浏览器</h3>
+	<ul>
+	<li>轻触左上的图标打开面板，可以访问打开的标签页列表.</li>
+	</ul>
+	<img src="button.png" />
+	<ul>
+	<li>您也可以拖动浏览器的左边缘打开面板.</li>
+	</ul>
+	<img src="slide_panel.png" />
+	<ul>
+	<li>点击关闭图标关闭标签页，您也可以向左或向右横扫关闭标签页.</li>
+	</ul>
+	<img src="close_tab.png" />
+	<p class="details">您还可以在设置中选择您所喜爱的界面风格.</p>
+</body>
+</html>

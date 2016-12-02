@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   Falcon Browser for Android 
+   Copyright (C) 2016 nicksong
+   Copyright (C) 2012 - to infinity and beyond J. Devauchelle and contributors.
+   Copyright (C) 2014 mogoweb.
+
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU General Public License
+   version 3 as published by the Free Software Foundation.
+
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nicksong.falcon"
+    android:installLocation="auto"
+    android:versionCode="14"
+    android:versionName="1.0.1" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+
+    <permission
+        android:name="com.nicksong.falcon.permissions.bookmarksprovider.READ"
+        android:description="@string/PermissionReadBookmarksDescription"
+        android:label="@string/PermissionReadBookmarksLabel"
+        android:permissionGroup="android.permission-group.PERSONAL_INFO"
+        android:protectionLevel="dangerous" />
+    <permission
+        android:name="com.nicksong.falcon.permissions.bookmarksprovider.WRITE"
+        android:description="@string/PermissionWriteBookmarksDescription"
+        android:label="@string/PermissionWriteBookmarksLabel"
+        android:permissionGroup="android.permission-group.PERSONAL_INFO"
+        android:protectionLevel="dangerous" />
+    <permission
+        android:name="com.nicksong.falcon.permissions.services.ADDONS"
+        android:description="@string/PermissionBindAddonServiceDescription"
+        android:label="@string/PermissionBindAddonServiceLabel"
+        android:protectionLevel="dangerous" />
+
+    <uses-permission android:name="com.nicksong.falcon.permissions.services.ADDONS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name="com.nicksong.falcon.ui.activities.SLAppication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/ApplicationName"
+        android:theme="@style/ApplicationTheme" >
+        <activity
+            android:name=".ui.activities.SealBrowserActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/ApplicationName"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.zxing.barcode.util.CaptureActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zxing.barcode.util.IsHttpDialog"
+            android:theme="@style/Full_Dialog" >
+        </activity>
+        <activity
+            android:name=".ui.preferences.PreferencesActivity"
+            android:label="@string/PreferencesActivityTitle" >
+        </activity>
+        <activity android:name=".ui.activities.BookmarksActivity" >
+        </activity>
+        <activity
+            android:name=".ui.activities.EditBookmarkActivity"
+            android:theme="@android:style/Theme.Holo.DialogWhenLarge" >
+        </activity>
+
+        <provider
+            android:name=".providers.BookmarksProvider"
+            android:authorities="com.nicksong.falcon.providers.bookmarksprovider"
+            android:exported="true"
+            android:readPermission="com.nicksong.falcon.permissions.bookmarksprovider.READ"
+            android:writePermission="com.nicksong.falcon.permissions.bookmarksprovider.WRITE" />
+        <provider
+            android:name=".providers.SslExceptionsProvider"
+            android:authorities="com.nicksong.falcon.providers.sslexceptionsprovider"
+            android:exported="false" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+    </application>
+
+</manifest>

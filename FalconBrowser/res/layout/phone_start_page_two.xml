@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   Tint Browser for Android
+  
+   Copyright (C) 2012 - to infinity and beyond J. Devauchelle and contributors.
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU General Public License
+   version 3 as published by the Free Software Foundation.
+ 
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+-->
+
+<com.nicksong.falcon.ui.views.OverScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_fine_night" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ExpandableListView
+            android:id="@+id/startListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/transparent"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/viewfinder_mask"
+            android:dividerHeight="1dp"
+            android:footerDividersEnabled="false"
+            android:groupIndicator="@null"
+            android:scrollbars="none" />
+    </LinearLayout>
+
+</com.nicksong.falcon.ui.views.OverScrollView>

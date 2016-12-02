@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <SurfaceView
+        android:id="@+id/preview_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <com.zxing.barcode.util.ViewfinderView
+        android:id="@+id/viewfinder_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/toplout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/grey" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="扫描二维码"
+                android:textColor="@color/black_1"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/activity_sao_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:paddingLeft="5dp"
+                android:drawableLeft="@drawable/back_seletor"
+                android:text="@string/back"
+                android:textColor="@drawable/text_blue"
+                android:textSize="@dimen/font_size_m" />
+            
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toplout"
+            android:layout_marginTop="20dip"
+            android:background="@null" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" >
+
+                <ImageView
+                    android:id="@+id/scan_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/scan_icon_nor" />
+
+                <TextView
+                    android:id="@+id/acti"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_toRightOf="@id/scan_iv"
+                    android:text="@string/scan_text"
+                    android:textColor="#fff"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</FrameLayout>

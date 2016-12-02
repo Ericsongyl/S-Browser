@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="@color/grey"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/widget_layout_normal"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/menu_addbookmark"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ic_press"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="2dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/ContentDescriptionBookmarkThumbnail"
+                android:src="@drawable/menu_add_book_mark" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menu_addmark"
+                android:textColor="@color/black_1"
+                android:textSize="@dimen/font_size_s" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu_bookmark"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ic_press"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="2dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/ContentDescriptionBookmarkThumbnail"
+                android:src="@drawable/menu_bookmark" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menu_history"
+                android:textColor="@color/black_1"
+                android:textSize="@dimen/font_size_s" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ic_press"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="2dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/ContentDescriptionBookmarkThumbnail"
+                android:src="@drawable/menu_pagesearch" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menu_search"
+                android:textColor="@color/black_1"
+                android:textSize="@dimen/font_size_s" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu_share"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ic_press"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="2dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/ContentDescriptionBookmarkThumbnail"
+                android:src="@drawable/menu_share" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menu_share"
+                android:textColor="@color/black_1"
+                android:textSize="@dimen/font_size_s" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/widget_layout_settings"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/menu_fullscreen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ic_press"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="2dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/ContentDescriptionBookmarkThumbnail"
+                android:src="@drawable/menu_fullscreen" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menu_fullscreen"
+                android:textColor="@color/black_1"
+                android:textSize="@dimen/font_size_s" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu_settings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ic_press"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="2dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/ContentDescriptionBookmarkThumbnail"
+                android:src="@drawable/menu_settings" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menu_settings"
+                android:textColor="@color/black_1"
+                android:textSize="@dimen/font_size_s" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu_about"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ic_press"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="2dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/ContentDescriptionBookmarkThumbnail"
+                android:src="@drawable/menu_about" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menu_about"
+                android:textColor="@color/black_1"
+                android:textSize="@dimen/font_size_s" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu_exit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ic_press"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="2dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/ContentDescriptionBookmarkThumbnail"
+                android:src="@drawable/menu_exit" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menu_quit"
+                android:textColor="@color/black_1"
+                android:textSize="@dimen/font_size_s" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

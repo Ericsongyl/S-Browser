@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+   Tint Browser for Android
+
+   Copyright (C) 2014 mogoweb.
+   Copyright (C) 2012 - to infinity and beyond J. Devauchelle and contributors.
+
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU General Public License
+   version 3 as published by the Free Software Foundation.
+
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+ -->
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.nicksong.falcon" >
+
+    <PreferenceCategory android:title="@string/PreferenceCategoryTextSizeTitle">
+
+        <com.nicksong.falcon.ui.preferences.AccessibilityPreviewPreference
+            android:title="@string/PreferenceAccessibilityTextSizePreviewTitle" />
+
+        <com.nicksong.falcon.ui.preferences.SeekBarPreference
+            android:title="@string/PreferenceAccessibilityTextScalingTitle"
+            android:defaultValue="100"
+            app:minValue="50"
+            app:maxValue="200"
+            app:symbol="%%"
+            app:stepValue="5"
+            android:key="PREFERENCE_TEXT_SCALING" />
+
+        <com.nicksong.falcon.ui.preferences.SeekBarPreference
+            android:title="@string/PreferenceAccessibilityMinimumFontSizeTitle"
+            android:summary="@string/PreferenceAccessibilityMinimumFontSizeSummary"
+            android:defaultValue="1"
+            app:minValue="1"
+            app:maxValue="24"
+            app:symbol="pt"
+            android:key="PREFERENCE_MINIMUM_FONT_SIZE" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

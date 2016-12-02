@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+   Tint Browser for Android
+  
+   Copyright (C) 2012 - to infinity and beyond J. Devauchelle and contributors.
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU General Public License
+   version 3 as published by the Free Software Foundation.
+ 
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/WebViewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/UrlBar"
+        android:background="#dcdcdc"
+        android:orientation="vertical" />
+
+    <com.mogoweb.ui.views.TabletUrlBar
+        android:id="@+id/UrlBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <ImageView
+        android:id="@+id/ExitFullScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dip"
+        android:layout_marginBottom="10dip"
+        android:contentDescription="@string/ContentDescriptionExitFullScreen"
+        android:src="@drawable/ic_exit_fullscreen"
+        android:visibility="gone" />
+    
+    <ProgressBar
+        android:id="@+id/WebViewProgress"
+        style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/UrlBar"        
+        android:layout_marginLeft="0dip"
+        android:layout_marginRight="0dip"
+        android:layout_marginTop="-8dip"
+        android:indeterminate="false" >
+    </ProgressBar>
+
+</RelativeLayout>

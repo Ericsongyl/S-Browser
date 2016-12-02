@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   Tint Browser for Android
+  
+   Copyright (C) 2012 - to infinity and beyond J. Devauchelle and contributors.
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU General Public License
+   version 3 as published by the Free Software Foundation.
+ 
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+-->
+
+<resources>
+
+    <declare-styleable name="TabletMode">
+        <attr name="tabletMode" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="SeekBarPreference">
+        <attr name="android:defaultValue" />
+        <attr name="minValue" format="integer" />
+        <attr name="maxValue" format="integer" />
+        <attr name="stepValue" format="integer" />
+        <attr name="symbol" format="string" />
+    </declare-styleable>
+    <declare-styleable name="WebViewDialogPreference">
+        <attr name="html" format="string" />
+    </declare-styleable>
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+</resources>

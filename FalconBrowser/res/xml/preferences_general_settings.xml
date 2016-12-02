@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   Tint Browser for Android
+  
+   Copyright (C) 2012 - to infinity and beyond J. Devauchelle and contributors.
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU General Public License
+   version 3 as published by the Free Software Foundation.
+ 
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <com.nicksong.falcon.ui.preferences.HomepageSpinnerPreference
+        android:dialogTitle="@string/PreferenceHomePageDialogTitle"
+        android:key="PREFERENCE_HOME_PAGE"
+        android:negativeButtonText="@string/Cancel"
+        android:positiveButtonText="@string/OK"
+        android:summary="@string/PreferenceGeneralHomepageSummary"
+        android:title="@string/PreferenceGeneralHomepageTitle" />
+
+    <com.nicksong.falcon.ui.preferences.SearchEnginePreference
+        android:key="PREFERENCE_SEARCH_URL"
+        android:summary="@string/PreferenceGeneralSearchUrlSummary"
+        android:title="@string/PreferenceGeneralSearchUrlTitle" />
+
+    <ListPreference
+        android:defaultValue="ASK"
+        android:entries="@array/PreferenceRestoreTabsEntries"
+        android:entryValues="@array/PreferenceRestoreTabsValues"
+        android:key="PREFERENCE_RESTORE_TABS"
+        android:summary="@string/PreferenceRestoreTabsSummary"
+        android:title="@string/PreferenceRestoreTabsTitle" />
+
+    <PreferenceCategory android:title="@string/PreferenceCategoryStartPageTitle" >
+        <EditTextPreference
+            android:defaultValue="@integer/default_start_page_items_number"
+            android:key="PREFERENCE_START_PAGE_LIMIT"
+            android:numeric="integer"
+            android:summary="@string/PreferenceGeneralStartPageLimitSummary"
+            android:title="@string/PreferenceGeneralStartPageLimitTitle" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="PREFERENCE_CATEGORY_TABLET_UI"
+        android:title="@string/PreferenceCategoryUITitle" >
+        <ListPreference
+            android:defaultValue="AUTO"
+            android:entries="@array/PreferenceUITypeEntries"
+            android:entryValues="@array/PreferenceUITypeValues"
+            android:key="PREFERENCE_UI_TYPE"
+            android:summary="@string/PreferenceUITypeSummary"
+            android:title="@string/PreferenceUITypeTitle" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="PREFERENCE_CATEGORY_OLD_PHONE_UI"
+        android:title="@string/PreferenceCategoryUITitle" >
+        <ListPreference
+            android:defaultValue="AUTO"
+            android:entries="@array/PreferenceUITypeEntries"
+            android:entryValues="@array/PreferenceUITypeValues"
+            android:key="PREFERENCE_UI_TYPE"
+            android:summary="@string/PreferenceUITypeSummary"
+            android:title="@string/PreferenceUITypeTitle" />
+        <ListPreference
+            android:defaultValue="RIGHT"
+            android:entries="@array/PreferenceBubblePositionEntries"
+            android:entryValues="@array/PreferenceBubblePositionValues"
+            android:key="PREFERENCE_BUBBLE_POSITION"
+            android:summary="@string/PreferenceBubblePositionSummary"
+            android:title="@string/PreferenceBubblePositionTitle" />
+
+        <EditTextPreference
+            android:defaultValue="3"
+            android:key="PREFERENCE_TOOLBARS_AUTOHIDE_DURATION"
+            android:numeric="integer"
+            android:summary="@string/PreferenceToolbarsAutoHideDurationSummary"
+            android:title="@string/PreferenceToolbarsAutoHideDurationTitle" />
+
+        <ListPreference
+            android:defaultValue="BUTTONS"
+            android:entries="@array/PreferenceSwitchTabsMethodEntries"
+            android:entryValues="@array/PreferenceSwitchTabsMethodValues"
+            android:key="PREFERENCES_SWITCH_TABS_METHOD"
+            android:summary="@string/PreferenceSwitchTabsMethodSummary"
+            android:title="@string/PreferenceSwitchTabsMethodTitle" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="PREFERENCE_CATEGORY_NEW_PHONE_UI"
+        android:title="@string/PreferenceCategoryUITitle" >
+        <ListPreference
+            android:defaultValue="AUTO"
+            android:entries="@array/PreferenceUITypeEntries"
+            android:entryValues="@array/PreferenceUITypeValues"
+            android:key="PREFERENCE_UI_TYPE"
+            android:summary="@string/PreferenceUITypeSummary"
+            android:title="@string/PreferenceUITypeTitle" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="PREFERENCE_CLOSE_PANEL_ON_NEW_TAB"
+            android:summary="@string/PreferenceClosePanelOnNewTabSummary"
+            android:title="@string/PreferenceClosePanelOnNewTabTitle" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

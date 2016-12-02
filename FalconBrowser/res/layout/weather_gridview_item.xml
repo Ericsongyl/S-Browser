@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/day_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/nav" />
+    
+    <TextView
+        android:id="@+id/day_wind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginTop="5dp"
+        android:textSize="@dimen/font_size_m" />
+    
+    <TextView
+        android:id="@+id/day_weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_m" />
+
+    <TextView
+        android:id="@+id/day_temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_m" />
+    <TextView
+        android:id="@+id/day_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_marginTop="2dp"
+        android:textColor="@color/white"
+        android:maxLength="2"
+        android:textSize="@dimen/font_size_m" />
+
+</LinearLayout>

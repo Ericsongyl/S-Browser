@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal" >
+
+        <LinearLayout
+            android:id="@+id/exit_setting_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/grey"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ff495a" />
+
+            <TextView
+                android:id="@+id/http"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:text="http"
+                android:textColor="#585858"
+                android:textSize="@dimen/font_size_s" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@drawable/line" />
+
+            <Button
+                android:id="@+id/exit_setting_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bt_nobgd"
+                android:onClick="open_link"
+                android:text="打开链接"
+                android:textColor="#585858"
+                android:textSize="@dimen/font_size_m" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@drawable/line" />
+
+            <Button
+                android:id="@+id/exit_cancel_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bt_nobgd"
+                android:onClick="cancel_link"
+                android:text="@string/Cancel"
+                android:textColor="#585858"
+                android:textSize="@dimen/font_size_m" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

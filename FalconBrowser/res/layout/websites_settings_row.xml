@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+   Tint Browser for Android
+  
+   Copyright (C) 2012 - to infinity and beyond J. Devauchelle and contributors.
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU General Public License
+   version 3 as published by the Free Software Foundation.
+ 
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+ -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dip"
+    android:paddingBottom="5dip"
+    android:orientation="horizontal" >
+    
+    <ImageView
+        android:id="@+id/WebsitesSettingsIcon"
+        android:layout_width="32dip"
+        android:layout_height="32dip"
+        android:layout_marginLeft="0dip"
+        android:layout_marginRight="8dip"
+        android:layout_marginTop="8dip"
+        android:layout_marginBottom="8dip"        
+        android:padding="2dip"
+        android:gravity="center_vertical"
+		android:scaleType="fitXY"
+		android:contentDescription="@string/ContentDescriptionFavicon"
+        android:src="@drawable/app_web_browser_sm" 
+        android:background="@drawable/bookmark_list_favicon_bg" />
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical" >
+
+    	<TextView
+    	    android:id="@+id/WebsitesSettingsTitle"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:text=""
+    	    android:textAppearance="?android:attr/textAppearanceMedium" />
+    	
+    	<TextView
+    	    android:id="@+id/WebsitesSettingsSubTitle"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:text=""
+    	    android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="right"        
+        android:orientation="horizontal" >
+    	
+    	<ImageView
+            android:id="@+id/WebsitesSettingsLocationIcon"
+            android:layout_width="32dip"
+            android:layout_height="32dip"
+            android:padding="2dip"
+            android:contentDescription="@string/ContentDescriptionWebsiteSettingsLocation" />
+
+        <ImageView
+            android:id="@+id/WebsitesSettingsUsageIcon"
+            android:layout_width="32dip"
+            android:layout_height="32dip"
+            android:padding="2dip"
+            android:contentDescription="@string/ContentDescriptionWebsiteSettingsUsage" />
+
+        <ImageView
+            android:id="@+id/WebsitesSettingsFeatureIcon"
+            android:layout_width="32dip"
+            android:layout_height="32dip"
+            android:padding="2dip"
+            android:contentDescription="@string/ContentDescriptionWebsiteSettingsFeature" />
+    
+    </LinearLayout>
+
+</LinearLayout>

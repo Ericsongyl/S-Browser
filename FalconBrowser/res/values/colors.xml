@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   Tint Browser for Android
+  
+   Copyright (C) 2012 - to infinity and beyond J. Devauchelle and contributors.
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU General Public License
+   version 3 as published by the Free Software Foundation.
+ 
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+-->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <color name="bookmarkListFaviconBackground">#23ffffff</color>
+    <color name="background_holo_light">#fff3f3f3</color>
+    <color name="new_tab_page_bg">#fff1f1f1</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="black_1">#80000000</color>
+    <color name="black_2">#d9d8d8</color>
+    <color name="black_3">#6000c9ff</color>
+    <color name="black_4">#20000000</color>
+    <color name="card_background">#ffffff</color>
+    <color name="grey">#f0f0f0</color>
+    <color name="blue">#598deb</color>
+    <color name="blue_dark">#ff00719b</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#b0000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="lightgreen">#aeff39</color>
+
+</resources>
