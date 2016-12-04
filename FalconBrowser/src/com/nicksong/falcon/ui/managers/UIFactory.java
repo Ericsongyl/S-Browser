@@ -19,7 +19,7 @@ import android.content.Context;
 import android.preference.PreferenceManager;
 
 import com.nicksong.falcon.R;
-import com.nicksong.falcon.ui.activities.SealBrowserActivity;
+import com.nicksong.falcon.ui.activities.FalconBrowserActivity;
 import com.nicksong.falcon.utils.Constants;
 
 public class UIFactory {
@@ -76,7 +76,7 @@ public class UIFactory {
 		}
 	}
 
-	public static UIManager createUIManager(SealBrowserActivity activity) {
+	public static UIManager createUIManager(FalconBrowserActivity activity) {
 		checkInit(activity);
 
 		switch (sUIType) {

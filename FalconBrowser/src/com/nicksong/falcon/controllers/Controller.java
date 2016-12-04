@@ -20,7 +20,7 @@ import java.util.List;
 
 import com.nicksong.falcon.addons.AddonManager;
 import com.nicksong.falcon.model.DownloadItem;
-import com.nicksong.falcon.ui.activities.SealBrowserActivity;
+import com.nicksong.falcon.ui.activities.FalconBrowserActivity;
 import com.nicksong.falcon.ui.managers.UIManager;
 
 public class Controller {
@@ -55,13 +55,13 @@ public class Controller {
 	}
 
 	private UIManager mUIManager;
-	private SealBrowserActivity mMainActivity;
+	private FalconBrowserActivity mMainActivity;
 
 	private List<DownloadItem> mDownloads;
 
 	private AddonManager mAddonManager;
 
-	public void init(UIManager uiManager, SealBrowserActivity activity) {
+	public void init(UIManager uiManager, FalconBrowserActivity activity) {
 		mUIManager = uiManager;
 		mMainActivity = activity;
 		mAddonManager = new AddonManager(mMainActivity, mUIManager);
@@ -71,7 +71,7 @@ public class Controller {
 		return mUIManager;
 	}
 
-	public SealBrowserActivity getMainActivity() {
+	public FalconBrowserActivity getMainActivity() {
 		return mMainActivity;
 	}
 

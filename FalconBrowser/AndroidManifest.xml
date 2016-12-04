@@ -61,14 +61,14 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:name="com.nicksong.falcon.ui.activities.SLAppication"
+        android:name="com.nicksong.falcon.ui.activities.FLAppication"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/ApplicationName"
         android:theme="@style/ApplicationTheme" >
         <activity
-            android:name=".ui.activities.SealBrowserActivity"
+            android:name=".ui.activities.FalconBrowserActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:label="@string/ApplicationName"
             android:launchMode="singleTask" >

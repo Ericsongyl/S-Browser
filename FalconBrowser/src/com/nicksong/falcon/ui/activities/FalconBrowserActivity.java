@@ -56,7 +56,7 @@ import com.nicksong.falcon.ui.managers.UIManager;
 import com.nicksong.falcon.utils.ApplicationUtils;
 import com.nicksong.falcon.utils.Constants;
 
-public class SealBrowserActivity extends Activity {
+public class FalconBrowserActivity extends Activity {
 
 	public static final int ACTIVITY_BOOKMARKS = 0;
 	public static final int ACTIVITY_OPEN_FILE_CHOOSER = 1;

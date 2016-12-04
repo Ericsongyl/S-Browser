@@ -37,7 +37,7 @@ import android.widget.ProgressBar;
 import com.nicksong.falcon.R;
 import com.mogoweb.chrome.WebView;
 import com.nicksong.falcon.controllers.Controller;
-import com.nicksong.falcon.ui.activities.SealBrowserActivity;
+import com.nicksong.falcon.ui.activities.FalconBrowserActivity;
 import com.nicksong.falcon.ui.components.CustomWebView;
 import com.nicksong.falcon.ui.fragments.BaseWebViewFragment;
 import com.nicksong.falcon.ui.fragments.StartPageFragment;
@@ -60,7 +60,7 @@ public class TabletUIManager extends BaseUIManager {
 	public PopMenu popMenu;
 	private boolean toggleMenu = false;
 
-	public TabletUIManager(SealBrowserActivity activity) {
+	public TabletUIManager(FalconBrowserActivity activity) {
 		super(activity);
 
 		mTabs = new Hashtable<Tab, TabletWebViewFragment>();

@@ -5,7 +5,7 @@ import android.content.Context;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
-import com.nicksong.falcon.ui.activities.SLAppication;
+import com.nicksong.falcon.ui.activities.FLAppication;
 import com.nicksong.falcon.utils.FileUtils;
 
 public class RequestManager {
@@ -20,7 +20,7 @@ public class RequestManager {
 
 	public static RequestQueue getRuquestQueue() {
 		if (mRequestQueue == null) {
-			mRequestQueue = Volley.newRequestQueue(SLAppication.getContext(), fileUtils.getCacheFile());
+			mRequestQueue = Volley.newRequestQueue(FLAppication.getContext(), fileUtils.getCacheFile());
 		}
 		return mRequestQueue;
 	}

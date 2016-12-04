@@ -41,7 +41,7 @@ import android.widget.TextView;
 
 import com.nicksong.falcon.R;
 import com.mogoweb.chrome.WebView;
-import com.nicksong.falcon.ui.activities.SealBrowserActivity;
+import com.nicksong.falcon.ui.activities.FalconBrowserActivity;
 import com.nicksong.falcon.ui.components.BadgedImageView;
 import com.nicksong.falcon.ui.components.CustomWebView;
 import com.nicksong.falcon.ui.fragments.BaseWebViewFragment;
@@ -76,7 +76,7 @@ public class PhoneUIManager extends BasePhoneUIManager {
 		sAnimationType = AnimationType.NONE;
 	}
 
-	public PhoneUIManager(SealBrowserActivity activity) {
+	public PhoneUIManager(FalconBrowserActivity activity) {
 		super(activity);
 		mPreferences = PreferenceManager.getDefaultSharedPreferences(activity);
 		mAdapter = new TabAdapter();
@@ -436,7 +436,7 @@ public class PhoneUIManager extends BasePhoneUIManager {
 
 	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent intent) {
-		if ((requestCode == SealBrowserActivity.ACTIVITY_BOOKMARKS) && (resultCode == Activity.RESULT_OK)) {
+		if ((requestCode == FalconBrowserActivity.ACTIVITY_BOOKMARKS) && (resultCode == Activity.RESULT_OK)) {
 			if (mTabDialog != null && mTabDialog.isShowing()) {
 				mTabDialog.dismiss();
 			}

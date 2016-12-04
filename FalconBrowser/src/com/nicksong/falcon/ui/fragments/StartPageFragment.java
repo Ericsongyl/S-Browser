@@ -53,8 +53,8 @@ import com.nicksong.falcon.data.RequestManager;
 import com.nicksong.falcon.model.Weather;
 import com.nicksong.falcon.model.WeatherDetail;
 import com.nicksong.falcon.model.WeatherDetail.WeatherFuture;
-import com.nicksong.falcon.ui.activities.SLAppication;
-import com.nicksong.falcon.ui.activities.SealBrowserActivity;
+import com.nicksong.falcon.ui.activities.FLAppication;
+import com.nicksong.falcon.ui.activities.FalconBrowserActivity;
 import com.nicksong.falcon.ui.adapter.ExpandableListViewAdapter;
 import com.nicksong.falcon.ui.adapter.WeatherViewAdapter;
 import com.nicksong.falcon.ui.managers.UIManager;
@@ -127,7 +127,7 @@ public abstract class StartPageFragment extends Fragment {
 		super.onAttach(activity);
 		if (!mInitialized) {
 			try {
-				mUIManager = ((SealBrowserActivity) activity).getUIManager();
+				mUIManager = ((FalconBrowserActivity) activity).getUIManager();
 			} catch (ClassCastException e) {
 				Log.e("StartPageFragment.onAttach()", e.getMessage());
 			}
@@ -141,8 +141,8 @@ public abstract class StartPageFragment extends Fragment {
 		super.onCreate(savedInstanceState);
 		mMaps = new HashMap<String, String>();
 		datas = new ArrayList<WeatherFuture>();
-		mApplication = SLAppication.getInstance();
-		mLocationClient = ((SLAppication) mApplication).getLocationClient();
+		mApplication = FLAppication.getInstance();
+		mLocationClient = ((FLAppication) mApplication).getLocationClient();
 		mLocationClient.registerLocationListener(mLocationListener);
 		if (NetUtil.isNetworkConnected()) {
 			mLocationClient.start();
@@ -344,7 +344,7 @@ public abstract class StartPageFragment extends Fragment {
 						datas = detail.weather_data;
 						weatherTitle.setText(datas.get(0).temperature);
 						pm25Title.setText(WeatherUtils.setWeatherAQI(Integer.parseInt(detail.pm25)));
-						futureWeatherAdapter = new WeatherViewAdapter(SLAppication.getContext(), datas);
+						futureWeatherAdapter = new WeatherViewAdapter(FLAppication.getContext(), datas);
 						futureWeatherGrid.setAdapter(futureWeatherAdapter);
 					}
 				}

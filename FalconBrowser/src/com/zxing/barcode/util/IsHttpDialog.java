@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.nicksong.falcon.R;
-import com.nicksong.falcon.ui.activities.SealBrowserActivity;
+import com.nicksong.falcon.ui.activities.FalconBrowserActivity;
 
 public class IsHttpDialog extends Activity {
 
@@ -28,7 +28,7 @@ public class IsHttpDialog extends Activity {
 	}
 
 	public void open_link(View v) {
-		Intent iBrowser = new Intent(this, SealBrowserActivity.class);
+		Intent iBrowser = new Intent(this, FalconBrowserActivity.class);
 		iBrowser.putExtra("QRCODE_URL", URL);
 		startActivity(iBrowser);
 	}

@@ -29,13 +29,13 @@ import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient.CustomViewCallback;
 
 import com.mogoweb.chrome.WebView;
-import com.nicksong.falcon.ui.activities.SealBrowserActivity;
+import com.nicksong.falcon.ui.activities.FalconBrowserActivity;
 import com.nicksong.falcon.ui.components.CustomWebView;
 import com.nicksong.falcon.ui.fragments.BaseWebViewFragment;
 
 public interface UIManager extends OnTouchListener {
 
-	SealBrowserActivity getMainActivity();
+	FalconBrowserActivity getMainActivity();
 
 	/**
 	 * Browser management.

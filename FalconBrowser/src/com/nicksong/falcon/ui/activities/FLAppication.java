@@ -7,7 +7,7 @@ import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
 import com.nicksong.falcon.data.RequestManager;
 
-public class SLAppication extends Application {
+public class FLAppication extends Application {
 	private static Context sContext;
 	public static final boolean DEBUG = true;
 	private LocationClient mLocationClient = null;

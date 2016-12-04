@@ -4,7 +4,7 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
-import com.nicksong.falcon.ui.activities.SLAppication;
+import com.nicksong.falcon.ui.activities.FLAppication;
 
 /**
  * Created by Ho on 2014/7/10.
@@ -21,7 +21,7 @@ public class NetUtil {
 	 * @return
 	 */
 	public static boolean isNetworkConnected() {
-		ConnectivityManager cm = (ConnectivityManager) SLAppication.getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+		ConnectivityManager cm = (ConnectivityManager) FLAppication.getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
 		NetworkInfo ni = cm.getActiveNetworkInfo();
 		if (ni != null) {
 			return ni.isAvailable();

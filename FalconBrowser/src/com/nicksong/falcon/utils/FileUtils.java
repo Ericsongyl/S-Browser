@@ -14,7 +14,7 @@ import android.content.Context;
 import android.os.Environment;
 import android.os.StatFs;
 
-import com.nicksong.falcon.ui.activities.SLAppication;
+import com.nicksong.falcon.ui.activities.FLAppication;
 
 public class FileUtils {
 	private String SDPATH = null;
@@ -23,7 +23,7 @@ public class FileUtils {
 	public FileUtils() {
 		// 初始化当前SD卡的路径
 		SDPATH = Environment.getExternalStorageDirectory() + "/";
-		mContext = SLAppication.getContext();
+		mContext = FLAppication.getContext();
 	}
 
 	// 得到当前SD卡的路径
@@ -36,7 +36,7 @@ public class FileUtils {
 		if (StorageUtils.isSDCardReady()) {
 			file = new File(getSDPATH() + mContext.getPackageName() + "/cache/");
 		} else {
-			return SLAppication.getContext().getCacheDir();
+			return FLAppication.getContext().getCacheDir();
 		}
 		if (!file.exists()) {
 			file.mkdirs();
@@ -50,7 +50,7 @@ public class FileUtils {
 		if (StorageUtils.isSDCardReady()) {
 			file = new File(getSDPATH() + mContext.getPackageName() + "/cache/");
 		} else {
-			return SLAppication.getContext().getCacheDir().getAbsolutePath();
+			return FLAppication.getContext().getCacheDir().getAbsolutePath();
 		}
 		/***/
 		if (!file.exists()) {
@@ -67,7 +67,7 @@ public class FileUtils {
 		if (StorageUtils.isSDCardReady()) {
 			file = new File(getSDPATH() + mContext.getPackageName() + "/apk/");
 		} else {
-			return SLAppication.getContext().getCacheDir().getAbsolutePath();
+			return FLAppication.getContext().getCacheDir().getAbsolutePath();
 		}
 		if (!file.exists()) {
 			return file.getAbsolutePath() + "/";
@@ -123,7 +123,7 @@ public class FileUtils {
 		FileOutputStream fos = null;
 		ObjectOutputStream oos = null;
 		try {
-			fos = SLAppication.getContext().openFileOutput(URLEncoder.encode(fileName, "UTF-8"), mode);
+			fos = FLAppication.getContext().openFileOutput(URLEncoder.encode(fileName, "UTF-8"), mode);
 			oos = new ObjectOutputStream(fos);
 			oos.writeObject(obj);
 			oos.close();
@@ -163,8 +163,8 @@ public class FileUtils {
 		ObjectInputStream ois = null;
 		try {
 			fileName = URLEncoder.encode(fileName, "UTF-8");
-			if (SLAppication.getContext().getFileStreamPath(fileName).exists()) {
-				fis = SLAppication.getContext().openFileInput(fileName);
+			if (FLAppication.getContext().getFileStreamPath(fileName).exists()) {
+				fis = FLAppication.getContext().openFileInput(fileName);
 				ois = new ObjectInputStream(fis);
 				obj = ois.readObject();
 			}

@@ -56,7 +56,7 @@ import com.nicksong.falcon.providers.BookmarksWrapper;
 import com.nicksong.falcon.tasks.ThumbnailSaver;
 import com.nicksong.falcon.ui.activities.BookmarksActivity;
 import com.nicksong.falcon.ui.activities.EditBookmarkActivity;
-import com.nicksong.falcon.ui.activities.SealBrowserActivity;
+import com.nicksong.falcon.ui.activities.FalconBrowserActivity;
 import com.nicksong.falcon.ui.components.CustomWebView;
 import com.nicksong.falcon.ui.dialogs.GeolocationPermissionsDialog;
 import com.nicksong.falcon.ui.fragments.BaseWebViewFragment;
@@ -79,7 +79,7 @@ public abstract class BaseUIManager implements UIManager {// , WebViewFragmentLi
 
 	private GeolocationPermissionsDialog mGeolocationPermissionsDialog;
 
-	protected SealBrowserActivity mActivity;
+	protected FalconBrowserActivity mActivity;
 	protected ActionBar mActionBar;
 	protected FragmentManager mFragmentManager;
 
@@ -93,7 +93,7 @@ public abstract class BaseUIManager implements UIManager {// , WebViewFragmentLi
 
 	private Handler mHandler;
 
-	public BaseUIManager(SealBrowserActivity activity) {
+	public BaseUIManager(FalconBrowserActivity activity) {
 		mActivity = activity;
 
 		mActionBar = mActivity.getActionBar();
@@ -133,7 +133,7 @@ public abstract class BaseUIManager implements UIManager {// , WebViewFragmentLi
 	}
 
 	@Override
-	public SealBrowserActivity getMainActivity() {
+	public FalconBrowserActivity getMainActivity() {
 		return mActivity;
 	}
 
@@ -212,7 +212,7 @@ public abstract class BaseUIManager implements UIManager {// , WebViewFragmentLi
 	@Override
 	public void openBookmarksActivityForResult() {
 		Intent i = new Intent(mActivity, BookmarksActivity.class);
-		mActivity.startActivityForResult(i, SealBrowserActivity.ACTIVITY_BOOKMARKS);
+		mActivity.startActivityForResult(i, FalconBrowserActivity.ACTIVITY_BOOKMARKS);
 	}
 
 	@Override
@@ -310,44 +310,44 @@ public abstract class BaseUIManager implements UIManager {// , WebViewFragmentLi
 					int actionId = intent.getIntExtra(Constants.EXTRA_ACTION_ID, -1);
 
 					switch (actionId) {
-					case SealBrowserActivity.CONTEXT_MENU_OPEN:
+					case FalconBrowserActivity.CONTEXT_MENU_OPEN:
 						if (HitTestResult.SRC_IMAGE_ANCHOR_TYPE == intent.getIntExtra(Constants.EXTRA_HIT_TEST_RESULT, -1)) {
-							requestHrefNode(SealBrowserActivity.CONTEXT_MENU_OPEN);
+							requestHrefNode(FalconBrowserActivity.CONTEXT_MENU_OPEN);
 						} else {
 							loadUrl(intent.getStringExtra(Constants.EXTRA_URL));
 						}
 						break;
 
-					case SealBrowserActivity.CONTEXT_MENU_OPEN_IN_NEW_TAB:
+					case FalconBrowserActivity.CONTEXT_MENU_OPEN_IN_NEW_TAB:
 
 						if (HitTestResult.SRC_IMAGE_ANCHOR_TYPE == intent.getIntExtra(Constants.EXTRA_HIT_TEST_RESULT, -1)) {
-							requestHrefNode(SealBrowserActivity.CONTEXT_MENU_OPEN_IN_NEW_TAB, intent.getBooleanExtra(Constants.EXTRA_INCOGNITO, false));
+							requestHrefNode(FalconBrowserActivity.CONTEXT_MENU_OPEN_IN_NEW_TAB, intent.getBooleanExtra(Constants.EXTRA_INCOGNITO, false));
 						} else {
 							addTab(intent.getStringExtra(Constants.EXTRA_URL), false, intent.getBooleanExtra(Constants.EXTRA_INCOGNITO, false), false);
 						}
 						break;
 
-					case SealBrowserActivity.CONTEXT_MENU_OPEN_IN_BACKGROUND:
+					case FalconBrowserActivity.CONTEXT_MENU_OPEN_IN_BACKGROUND:
 
 						if (HitTestResult.SRC_IMAGE_ANCHOR_TYPE == intent.getIntExtra(Constants.EXTRA_HIT_TEST_RESULT, -1)) {
-							requestHrefNode(SealBrowserActivity.CONTEXT_MENU_OPEN_IN_BACKGROUND, intent.getBooleanExtra(Constants.EXTRA_INCOGNITO, false));
+							requestHrefNode(FalconBrowserActivity.CONTEXT_MENU_OPEN_IN_BACKGROUND, intent.getBooleanExtra(Constants.EXTRA_INCOGNITO, false));
 						} else {
 							addTab(intent.getStringExtra(Constants.EXTRA_URL), true, intent.getBooleanExtra(Constants.EXTRA_INCOGNITO, false), false);
 						}
 						break;
 
-					case SealBrowserActivity.CONTEXT_MENU_COPY:
+					case FalconBrowserActivity.CONTEXT_MENU_COPY:
 						if (HitTestResult.SRC_IMAGE_ANCHOR_TYPE == intent.getIntExtra(Constants.EXTRA_HIT_TEST_RESULT, -1)) {
-							requestHrefNode(SealBrowserActivity.CONTEXT_MENU_COPY);
+							requestHrefNode(FalconBrowserActivity.CONTEXT_MENU_COPY);
 						} else {
 							ApplicationUtils.copyTextToClipboard(mActivity, intent.getStringExtra(Constants.EXTRA_URL),
 									mActivity.getResources().getString(R.string.UrlCopyToastMessage));
 						}
 						break;
 
-					case SealBrowserActivity.CONTEXT_MENU_DOWNLOAD:
+					case FalconBrowserActivity.CONTEXT_MENU_DOWNLOAD:
 						if (HitTestResult.SRC_IMAGE_ANCHOR_TYPE == intent.getIntExtra(Constants.EXTRA_HIT_TEST_RESULT, -1)) {
-							requestHrefNode(SealBrowserActivity.CONTEXT_MENU_DOWNLOAD);
+							requestHrefNode(FalconBrowserActivity.CONTEXT_MENU_DOWNLOAD);
 						} else {
 							try {
 								DownloadItem item = new DownloadItem(intent.getStringExtra(Constants.EXTRA_URL));
@@ -367,9 +367,9 @@ public abstract class BaseUIManager implements UIManager {// , WebViewFragmentLi
 						}
 						break;
 
-					case SealBrowserActivity.CONTEXT_MENU_SHARE:
+					case FalconBrowserActivity.CONTEXT_MENU_SHARE:
 						if (HitTestResult.SRC_IMAGE_ANCHOR_TYPE == intent.getIntExtra(Constants.EXTRA_HIT_TEST_RESULT, -1)) {
-							requestHrefNode(SealBrowserActivity.CONTEXT_MENU_SHARE);
+							requestHrefNode(FalconBrowserActivity.CONTEXT_MENU_SHARE);
 						} else {
 							ApplicationUtils.sharePage(mActivity, null, intent.getStringExtra(Constants.EXTRA_URL));
 						}
@@ -596,23 +596,23 @@ public abstract class BaseUIManager implements UIManager {// , WebViewFragmentLi
 					}
 
 					switch (msg.arg1) {
-					case SealBrowserActivity.CONTEXT_MENU_OPEN:
+					case FalconBrowserActivity.CONTEXT_MENU_OPEN:
 						loadUrl(url);
 						break;
 
-					case SealBrowserActivity.CONTEXT_MENU_OPEN_IN_NEW_TAB:
+					case FalconBrowserActivity.CONTEXT_MENU_OPEN_IN_NEW_TAB:
 						addTab(url, false, msg.arg2 > 0 ? true : false, false);
 						break;
 
-					case SealBrowserActivity.CONTEXT_MENU_OPEN_IN_BACKGROUND:
+					case FalconBrowserActivity.CONTEXT_MENU_OPEN_IN_BACKGROUND:
 						addTab(url, true, msg.arg2 > 0 ? true : false, false);
 						break;
 
-					case SealBrowserActivity.CONTEXT_MENU_COPY:
+					case FalconBrowserActivity.CONTEXT_MENU_COPY:
 						ApplicationUtils.copyTextToClipboard(mActivity, url, mActivity.getResources().getString(R.string.UrlCopyToastMessage));
 						break;
 
-					case SealBrowserActivity.CONTEXT_MENU_DOWNLOAD:
+					case FalconBrowserActivity.CONTEXT_MENU_DOWNLOAD:
 						/*DownloadItem item = new DownloadItem(url);
 
 						long id = ((DownloadManager) mActivity.getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(item);
@@ -623,7 +623,7 @@ public abstract class BaseUIManager implements UIManager {// , WebViewFragmentLi
 						*/
 						break;
 
-					case SealBrowserActivity.CONTEXT_MENU_SHARE:
+					case FalconBrowserActivity.CONTEXT_MENU_SHARE:
 						ApplicationUtils.sharePage(mActivity, null, url);
 						break;
 

@@ -40,7 +40,7 @@ import com.mogoweb.chrome.WebChromeClient;
 import com.mogoweb.chrome.WebView;
 import com.nicksong.falcon.tasks.UpdateFaviconTask;
 import com.nicksong.falcon.tasks.UpdateHistoryTask;
-import com.nicksong.falcon.ui.activities.SealBrowserActivity;
+import com.nicksong.falcon.ui.activities.FalconBrowserActivity;
 import com.nicksong.falcon.ui.managers.UIManager;
 import com.nicksong.falcon.utils.Constants;
 
@@ -100,7 +100,7 @@ public class CustomWebChromeClient extends WebChromeClient {
 		i.addCategory(Intent.CATEGORY_OPENABLE);
 		i.setType((acceptType == null || acceptType.isEmpty()) ? "*/*" : acceptType);
 		mUIManager.getMainActivity().startActivityForResult(Intent.createChooser(i, mUIManager.getMainActivity().getString(R.string.FileChooserPrompt)),
-				SealBrowserActivity.ACTIVITY_OPEN_FILE_CHOOSER);
+				FalconBrowserActivity.ACTIVITY_OPEN_FILE_CHOOSER);
 	}
 
 	public void openFileChooser(ValueCallback<Uri> uploadMsg) {
@@ -109,7 +109,7 @@ public class CustomWebChromeClient extends WebChromeClient {
 		i.addCategory(Intent.CATEGORY_OPENABLE);
 		i.setType("*/*");
 		mUIManager.getMainActivity().startActivityForResult(Intent.createChooser(i, mUIManager.getMainActivity().getString(R.string.FileChooserPrompt)),
-				SealBrowserActivity.ACTIVITY_OPEN_FILE_CHOOSER);
+				FalconBrowserActivity.ACTIVITY_OPEN_FILE_CHOOSER);
 	}
 
 	@Override

@@ -39,7 +39,7 @@ import android.widget.TextView;
 
 import com.nicksong.falcon.R;
 import com.mogoweb.chrome.WebView;
-import com.nicksong.falcon.ui.activities.SealBrowserActivity;
+import com.nicksong.falcon.ui.activities.FalconBrowserActivity;
 import com.nicksong.falcon.ui.components.CustomWebView;
 import com.nicksong.falcon.ui.fragments.BaseWebViewFragment;
 import com.nicksong.falcon.ui.fragments.LegacyPhoneStartPageFragment;
@@ -93,7 +93,7 @@ public class LegacyPhoneUIManager extends BasePhoneUIManager {
 		sAnimationType = AnimationType.FADE;
 	}
 
-	public LegacyPhoneUIManager(SealBrowserActivity activity) {
+	public LegacyPhoneUIManager(FalconBrowserActivity activity) {
 		super(activity);
 
 		updateSwitchTabsMethod();

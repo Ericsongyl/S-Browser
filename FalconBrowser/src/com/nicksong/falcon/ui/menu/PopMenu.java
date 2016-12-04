@@ -9,13 +9,13 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 
 import com.nicksong.falcon.R;
-import com.nicksong.falcon.ui.activities.SealBrowserActivity;
+import com.nicksong.falcon.ui.activities.FalconBrowserActivity;
 import com.nicksong.falcon.ui.preferences.PreferencesActivity;
 import com.nicksong.falcon.utils.Utils;
 
 public class PopMenu {
 
-	private SealBrowserActivity mActivity;
+	private FalconBrowserActivity mActivity;
 	private PopupWindow popupWindow;
 	/*Popu Menu*/
 	private LinearLayout mExit;
@@ -27,7 +27,7 @@ public class PopMenu {
 	private LinearLayout mSearch;
 	private View view = null;
 
-	public PopMenu(final SealBrowserActivity mActivity) {
+	public PopMenu(final FalconBrowserActivity mActivity) {
 
 		// TODO Auto-generated constructor stub
 		this.mActivity = mActivity;

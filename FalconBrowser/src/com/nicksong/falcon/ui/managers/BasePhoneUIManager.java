@@ -34,7 +34,7 @@ import android.widget.RelativeLayout;
 import com.nicksong.falcon.R;
 import com.mogoweb.chrome.WebView;
 import com.nicksong.falcon.controllers.Controller;
-import com.nicksong.falcon.ui.activities.SealBrowserActivity;
+import com.nicksong.falcon.ui.activities.FalconBrowserActivity;
 import com.nicksong.falcon.ui.components.CustomWebView;
 import com.nicksong.falcon.ui.fragments.BaseWebViewFragment;
 import com.nicksong.falcon.ui.fragments.PhoneWebViewFragment;
@@ -67,7 +67,7 @@ public abstract class BasePhoneUIManager extends BaseUIManager {
 
 	protected ActionMode mActionMode;
 
-	public BasePhoneUIManager(SealBrowserActivity activity) {
+	public BasePhoneUIManager(FalconBrowserActivity activity) {
 		super(activity);
 
 		mFragmentsList = new ArrayList<PhoneWebViewFragment>();
