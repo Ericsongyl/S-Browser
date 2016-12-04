@@ -5,7 +5,7 @@
     <string name="ApplicationDescription">猎鹰浏览器是Android下使用chromium核心的开源浏览器。</string>
     <string name="AboutVersionText">版本: %1$s (%2$s)</string>
     <string name="AboutLicenseText">协议: GPLv3</string>
-    <string name="AboutUrlText">https://github.com/mogoweb/TintBrowser</string>
+    <string name="AboutUrlText">https://github.com/Ericsongyl/FalconBrowser</string>
     <string name="PermissionReadBookmarksLabel">打开浏览器书签</string>
     <string name="PermissionReadBookmarksDescription">允许第三方应用或者附加组件打历史记录或者书签。</string>
     <string name="PermissionWriteBookmarksLabel">添加新书签</string>
@@ -22,7 +22,7 @@
     <string name="menu_fullscreen">全屏显示</string>
     <string name="menu_settings">系统设置</string>
     <string name="site_news">今日头条</string>
-    <string name="site_nav">网址导航</string>
+    <string name="site_nav">好听音乐</string>
     <string name="site_baidu">百度一下</string>
     <string name="site_shipin">精彩视频</string>
     <string name="menu_about">关于我们</string>

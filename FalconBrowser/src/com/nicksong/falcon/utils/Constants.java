@@ -106,7 +106,7 @@ public class Constants {
 	public static final String TOGGLE_MENU_STATUS = "TOGGLE_MENU_STATUS";
 	// Baidu Map
 	public static final String BAIDU_MAP_KAY = "1xUfcxWPCOkGjH1ODA05jBXd";
-	public static final String BAIDU_MAP_MCODE = "21:C8:8D:03:7C:29:7D:EB:51:32:90:50:28:49:13:0A:D6:CA:35:C9;com.nicksong.falcon";
+	public static final String BAIDU_MAP_MCODE = "21:C8:8D:03:7C:29:7D:EB:51:32:90:50:28:49:13:0A:D6:CA:35:C9;com.seal";
 	public static final String BAIDU_BASE_URL = "http://api.map.baidu.com/telematics/v3/weather?location=";
 	// Hot News
 	public static final String HOT_NEWS_URL = "http://api.yi18.net/top/list?id=";

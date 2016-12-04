@@ -285,7 +285,7 @@ public abstract class StartPageFragment extends Fragment {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				mUIManager.loadUrl("http://m.hao123.com");
+				mUIManager.loadUrl("http://h.xiami.com");
 			}
 		});
 		baidu.setOnClickListener(new View.OnClickListener() {

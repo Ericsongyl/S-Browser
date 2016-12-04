@@ -123,8 +123,8 @@
                         android:orientation="vertical" >
 
                         <com.nicksong.falcon.ui.views.CircleImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
                             android:contentDescription="@string/ContentDescriptionBookmarkThumbnail"
                             android:src="@drawable/ic_news"
                             app:border_color="@color/ic_textview"
@@ -148,10 +148,10 @@
                         android:orientation="vertical" >
 
                         <com.nicksong.falcon.ui.views.CircleImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
                             android:contentDescription="@string/ContentDescriptionBookmarkThumbnail"
-                            android:src="@drawable/ic_nav"
+                            android:src="@drawable/music"
                             app:border_color="@color/ic_textview"
                             app:border_width="3dp" />
 
@@ -173,8 +173,8 @@
                         android:orientation="vertical" >
 
                         <com.nicksong.falcon.ui.views.CircleImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
                             android:contentDescription="@string/ContentDescriptionBookmarkThumbnail"
                             android:src="@drawable/ic_baidu"
                             app:border_color="@color/ic_textview"
@@ -198,8 +198,8 @@
                         android:orientation="vertical" >
 
                         <com.nicksong.falcon.ui.views.CircleImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
                             android:contentDescription="@string/ContentDescriptionBookmarkThumbnail"
                             android:src="@drawable/ic_shipin"
                             app:border_color="@color/ic_textview"
