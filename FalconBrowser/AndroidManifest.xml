@@ -19,7 +19,7 @@
     package="com.nicksong.falcon"
     android:installLocation="auto"
     android:versionCode="14"
-    android:versionName="1.0.1" >
+    android:versionName="1.0.0" >
 
     <uses-sdk
         android:minSdkVersion="14"
