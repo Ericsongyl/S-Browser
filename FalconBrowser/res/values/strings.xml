@@ -18,13 +18,13 @@
 <resources>
 
     <string name="ApplicationName">Falcon Browser</string>
-    <string name="ApplicationDescription">Seal Browser is an open-source browser for Android.</string>
+    <string name="ApplicationDescription">Falcon Browser is an open-source browser for Android.</string>
 
     <string name="AboutVersionText">Version: %1$s (%2$s)</string>
     <string name="AboutLicenseText">License: GPLv3</string>
-    <string name="AboutUrlText">https://github.com/Anasthase/TintBrowser</string>
+    <string name="AboutUrlText">https://github.com/Ericsongyl/FalconBrowser</string>
 
-    <string name="PermissionReadBookmarksLabel">Read Tint Browser bookmarks</string>
+    <string name="PermissionReadBookmarksLabel">Read Browser bookmarks</string>
     <string name="PermissionReadBookmarksDescription">Allow third-party applications or addons to read Tint Browser\'s history and bookmarks database.</string>
 
 	<string name="PermissionWriteBookmarksLabel">Write Tint Browser bookmarks</string>
