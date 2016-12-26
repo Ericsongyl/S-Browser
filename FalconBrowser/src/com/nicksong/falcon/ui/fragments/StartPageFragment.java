@@ -200,6 +200,7 @@ public abstract class StartPageFragment extends Fragment {
 			mStartListView.expandGroup(0);
 			mStartListView.expandGroup(1);
 			mStartListView.expandGroup(2);
+			mStartListView.expandGroup(3);
 		}
 		futureWeatherGrid.setOnItemClickListener(new OnItemClickListener() {
 
