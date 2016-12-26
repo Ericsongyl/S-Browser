@@ -5,8 +5,10 @@ Android：使用Chromium_WebView内核，基于TintBrowser框架，实现FalconB
 
 #如何编译
 在Eclipse中import以下3个工程：
-1.chromium内核：chromium_webview-master\java
-2.TintBrowser框架：TintBrowserAddonFrameworkLibrary-master
-3.FalconBrowser工程
+1.chromium内核：chromium_webview-master\java；
+
+2.TintBrowser框架：TintBrowserAddonFrameworkLibrary-master；
+
+3.FalconBrowser工程。
 
 #运行FalconBrowser工程
