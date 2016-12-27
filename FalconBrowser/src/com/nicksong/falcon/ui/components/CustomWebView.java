@@ -75,9 +75,7 @@ public class CustomWebView extends WebView implements DownloadListener, Download
 	public CustomWebView(Context context, AttributeSet attrs, boolean privateBrowsing) {
 		super(context, attrs, android.R.attr.webViewStyle);
 		mPrivateBrowsing = privateBrowsing;
-
 		mContext = context;
-
 		if (!isInEditMode()) {
 			loadSettings();
 			setupContextMenu();
@@ -238,7 +236,6 @@ public class CustomWebView extends WebView implements DownloadListener, Download
 		result.putExtra(Constants.EXTRA_HIT_TEST_RESULT, hitTestResult);
 		result.putExtra(Constants.EXTRA_URL, url);
 		result.putExtra(Constants.EXTRA_INCOGNITO, isPrivateBrowsingEnabled());
-
 		return result;
 	}
 

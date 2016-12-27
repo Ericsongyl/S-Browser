@@ -14,7 +14,7 @@
    GNU General Public License for more details.
 -->
 
-<com.nicksong.falcon.ui.views.PullLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
@@ -26,7 +26,8 @@
         <RelativeLayout
             android:id="@+id/rl_top"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:visibility="gone" >
 
             <ImageView
                 android:id="@+id/iv"
@@ -104,6 +105,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
+                android:layout_marginTop="20dp"
                 android:paddingBottom="50dp"
                 android:paddingTop="10dp" >
 
@@ -226,8 +228,9 @@
             android:layout_marginLeft="5dp"
             android:drawableLeft="@drawable/locate_indicator"
             android:textColor="@color/white"
-            android:textSize="@dimen/font_size_m" />
+            android:textSize="@dimen/font_size_m"
+            android:visibility="gone" />
         
     </RelativeLayout>
 
-</com.nicksong.falcon.ui.views.PullLayout>
+</ScrollView>

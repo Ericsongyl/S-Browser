@@ -23,7 +23,7 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 	public String[] group = { "资讯", "视频", "购物", "生活" , "旅游"};
 	public String[][] gridViewChild = { { "腾讯", "搜狐", "新浪", "网易", "凤凰" }, { "优酷", "爱奇艺", "乐视", "PPTV" }, { "淘宝", "天猫", "京东", "唯品会", "1号店" },
 			{ "58同城", "赶集网", "大众点评", "百姓网" }, {"携程", "同程", "途牛", "艺龙"} };
-	public String[][] gridViewSite = { { "http://3g.qq.com", "http://m.souhu.com", "http://sina.cn", "http://3g.163.com", "http://i.ifeng.com" },
+	public String[][] gridViewSite = { { "http://3g.qq.com", "http://m.sohu.com", "http://sina.cn", "http://3g.163.com", "http://i.ifeng.com" },
 			{ "http://m.youku.com", "http://m.iqiyi.com", "http://m.letv.com", "http://m.pptv.com" },
 			{ "http://m.taobao.com", "http://m.tmall.com", "http://m.jd.com", "http://m.vip.com", "http://m.yhd.com" },
 			{ "http://m.58.com", "http://wap.ganji.com", "http://wap.dianping.com", "http://shanghai.baixing.com" },

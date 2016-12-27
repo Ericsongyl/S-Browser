@@ -193,7 +193,6 @@ public abstract class StartPageFragment extends Fragment {
 	}
 
 	private void iniListener() {
-
 		if (mUIManager != null) {
 			mStartListViewAdapter = new ExpandableListViewAdapter(getActivity(), mUIManager);
 			mStartListView.setAdapter(mStartListViewAdapter);
