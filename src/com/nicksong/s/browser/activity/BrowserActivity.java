@@ -16,6 +16,7 @@ import com.tencent.smtt.sdk.WebView;
 import com.tencent.smtt.sdk.WebViewClient;
 import com.tencent.smtt.sdk.WebSettings.LayoutAlgorithm;
 import com.tencent.smtt.utils.TbsLog;
+import com.zbar.lib.CaptureActivity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -226,8 +227,12 @@ public class BrowserActivity extends Activity implements OnClickListener{
 		}
 	}
 	
+	private void goToScanQrcode() {
+		startActivity(new Intent(BrowserActivity.this, CaptureActivity.class));
+	}
+	
 	private void showToastMsg(String msg) {
-		Toast.makeText(BrowserActivity.this, msg, Toast.LENGTH_LONG).show();
+		Toast.makeText(BrowserActivity.this, msg, Toast.LENGTH_SHORT).show();
 	}
 	
 	@Override
@@ -235,7 +240,7 @@ public class BrowserActivity extends Activity implements OnClickListener{
 		// TODO Auto-generated method stub
 		switch(v.getId()) {
 		case R.id.ll_ic_qrcode:
-			showToastMsg("敬请期待");
+			goToScanQrcode();
 			break;
 		case R.id.tv_search_input:
 			toInputSearchActivity();
@@ -269,7 +274,8 @@ public class BrowserActivity extends Activity implements OnClickListener{
 			firstClickTime = System.currentTimeMillis();
 			showToastMsg("再按一次退出浏览器");
 		} else {
-			finish();
+//			finish();
+			Process.killProcess(Process.myPid());
 		}
 	}
 	

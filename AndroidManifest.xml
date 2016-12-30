@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nicksong.s.browser"
-    android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionCode="1010"
+    android:versionName="1.1.0" >
 
     <uses-sdk
         android:minSdkVersion="11"
@@ -19,6 +19,9 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
     <!-- 硬件加速对X5视频播放非常重要，建议开启 -->
     <uses-permission android:name="android.permission.GET_TASKS" />
 
@@ -31,30 +34,39 @@
         android:theme="@style/MyAppTheme" >
         <meta-data
             android:name="QBSDKAppKey"
-            android:value="jDdwgepLvKCSrPb9gIu7YKqm" />
+            android:value="lwalvWFqxIkV/EuLxoNRKpUM" />
+
         <activity
             android:name="com.nicksong.s.browser.activity.BrowserActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:label="@string/app_name"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            android:launchMode="singleTask" >
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateAlwaysHidden" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
             </intent-filter>
         </activity>
-        <activity 
+        <activity
+            android:name="com.zbar.lib.CaptureActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
             android:name="com.nicksong.s.browser.activity.InputSearchActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:label="@string/app_name"
-            android:windowSoftInputMode="stateVisible"
-            android:theme="@style/Transparent"/>
-        <!-- Tbs X5内核自带视频播放 start-->
+            android:theme="@style/Transparent"
+            android:windowSoftInputMode="stateVisible" />
+        <!-- Tbs X5内核自带视频播放 start -->
         <activity
             android:name="com.tencent.smtt.sdk.VideoActivity"
             android:alwaysRetainTaskState="true"
@@ -67,7 +79,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <!-- Tbs X5内核自带视频播放 end-->
+        <!-- Tbs X5内核自带视频播放 end -->
     </application>
 
 </manifest>
