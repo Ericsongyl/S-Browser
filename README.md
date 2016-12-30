@@ -1,4 +1,4 @@
-# S-Browser(S浏览器)
+# S-Browser(S浏览器，S的意义：sensitive-灵敏、灵活，super-超级，simple-简单、简洁)
 ## v1.0工程
 Android：使用Chromium_WebView内核，基于TintBrowser框架，实现S-Browser(S浏览器)，包括浏览器所有功能（浏览历史、书签管理、添加书签、全屏显示、系统设置等功能），app大小有34M。
 
