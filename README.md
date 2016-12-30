@@ -20,3 +20,5 @@ Android：使用TBS X5内核，实现FalconBrowser猎鹰浏览器，用户体验
 ## v2.0工程如何编译运行
 在Eclipse中直接编译运行。
 
+## 效果图
+![效果图](https://github.com/Ericsongyl/FalconBrowser/blob/master/pic/GIF.gif)
