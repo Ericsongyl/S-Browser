@@ -21,4 +21,4 @@ Android：使用TBS X5内核，实现S-Browser(S浏览器)，用户体验大大�
 在Eclipse中直接编译运行。
 
 ## 效果图
-![效果图](https://github.com/Ericsongyl/FalconBrowser/blob/master/pic/GIF.gif)
+![效果图](https://github.com/Ericsongyl/S-Browser/blob/master/pic/GIF.gif)
