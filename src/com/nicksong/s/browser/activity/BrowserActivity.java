@@ -6,6 +6,7 @@ import java.net.URL;
 import com.nicksong.s.browser.R;
 import com.nicksong.s.browser.util.AppUtil;
 import com.nicksong.s.browser.util.Constant;
+import com.nicksong.s.browser.view.MoreMenuPopWindow;
 import com.nicksong.s.browser.view.X5WebView;
 import com.tencent.smtt.export.external.interfaces.WebResourceResponse;
 import com.tencent.smtt.sdk.CookieSyncManager;
@@ -25,6 +26,7 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Process;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,6 +44,7 @@ public class BrowserActivity extends Activity implements OnClickListener{
 	
 	private ProgressBar mPb;
 	private X5WebView mWebView;
+	private FrameLayout mViewParent;
 	private LinearLayout llQrcode;
 	private ImageView ivQrcode;
 	private ImageView ivWebIcon;
@@ -58,6 +61,8 @@ public class BrowserActivity extends Activity implements OnClickListener{
 	private ImageView ivMenu;
 	private ImageView ivHome;
 	private Button btnMultiWindows;
+	private LinearLayout llBottom;
+	private MoreMenuPopWindow menuPopWindow;
 	private URL mIntentUrl;
 	private WebViewClient mWebViewClient;
 	private WebChromeClient mWebChromeClient;
@@ -96,7 +101,7 @@ public class BrowserActivity extends Activity implements OnClickListener{
 	}
 	
 	private void initView() {
-		mWebView = (X5WebView)findViewById(R.id.x5_wv_main);
+		mViewParent = (FrameLayout)findViewById(R.id.x5_wv_main);
 		mPb = (ProgressBar)findViewById(R.id.pb_web_loading);
 		llQrcode = (LinearLayout)findViewById(R.id.ll_ic_qrcode);
 		ivQrcode = (ImageView)findViewById(R.id.iv_qrcode);
@@ -104,6 +109,7 @@ public class BrowserActivity extends Activity implements OnClickListener{
 		tvInputUrl = (TextView)findViewById(R.id.tv_search_input);
 		llRefresh = (LinearLayout)findViewById(R.id.ll_ic_refresh);
 		ivRefresh = (ImageView)findViewById(R.id.iv_refresh);
+		llBottom = (LinearLayout)findViewById(R.id.ll_bottom);
 		llBack = (LinearLayout)findViewById(R.id.ll_ic_back);
 		llForward = (LinearLayout)findViewById(R.id.ll_ic_forward);
 		llMenu = (LinearLayout)findViewById(R.id.ll_ic_menu);
@@ -148,6 +154,10 @@ public class BrowserActivity extends Activity implements OnClickListener{
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		mWebView = new X5WebView(this, null);
+		mViewParent.addView(mWebView, new FrameLayout.LayoutParams(
+				FrameLayout.LayoutParams.MATCH_PARENT,
+				FrameLayout.LayoutParams.MATCH_PARENT));
 		X5WebView.setSmallWebViewEnabled(true);
 		mWebViewClient = new MyWebViewClient();
 		mWebChromeClient = new MyWebChromeClient();
@@ -231,6 +241,11 @@ public class BrowserActivity extends Activity implements OnClickListener{
 		startActivity(new Intent(BrowserActivity.this, CaptureActivity.class));
 	}
 	
+	private void showMoreMenu() {
+		menuPopWindow = new MoreMenuPopWindow(BrowserActivity.this, mViewParent);
+		menuPopWindow.showAtLocation(llBottom, Gravity.BOTTOM, 0, llBottom.getHeight());
+	}
+	
 	private void showToastMsg(String msg) {
 		Toast.makeText(BrowserActivity.this, msg, Toast.LENGTH_SHORT).show();
 	}
@@ -255,6 +270,7 @@ public class BrowserActivity extends Activity implements OnClickListener{
 			goForwardPage();
 			break;
 		case R.id.ll_ic_menu:
+//			showMoreMenu();
 			showToastMsg("敬请期待");
 			break;
 		case R.id.ll_ic_home:

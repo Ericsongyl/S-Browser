@@ -11,6 +11,9 @@
     <color name="color_gray_797979">#797979</color>
     <color name="color_gray_e5e5e5">#E5E5E5</color>
     <color name="color_gray_333333">#333333</color>
+    <color name="color_gray_999999">#999999</color>
     <color name="color_half_transparent">#b0000000</color>
 
+    <drawable name="gray">#35000000</drawable>
+    <drawable name="transparent">#00000000</drawable>
 </resources>

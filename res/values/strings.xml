@@ -5,5 +5,14 @@
     <string name="search_or_url">搜索或网址</string>
     <string name="scan_qrcode">二维码扫描</string>
     <string name="scan_tips">将二维码图片对准扫描框即可自动扫描</string>
+    <string name="menu_bookmark">书签</string>
+    <string name="menu_history">历史</string>
+    <string name="menu_no_trace">无痕模式</string>
+    <string name="menu_night">夜间模式</string>
+    <string name="menu_full_screen">全屏模式</string>
+    <string name="menu_download">下载</string>
+    <string name="menu_setting">设置</string>
+    <string name="menu_about">关于</string>
+    <string name="menu_power_off">退出</string>
 
 </resources>
