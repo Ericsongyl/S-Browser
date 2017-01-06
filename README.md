@@ -21,4 +21,9 @@ Android：使用TBS X5内核，实现S-Browser(S浏览器)，用户体验大大�
 在Eclipse中直接编译运行。
 
 ## 效果图
+![效果图](https://github.com/Ericsongyl/S-Browser/blob/master/pic/1.png)
+![效果图](https://github.com/Ericsongyl/S-Browser/blob/master/pic/2.jpg)
+![效果图](https://github.com/Ericsongyl/S-Browser/blob/master/pic/3.png)
+![效果图](https://github.com/Ericsongyl/S-Browser/blob/master/pic/device-2017-01-06-103054.png)
+![效果图](https://github.com/Ericsongyl/S-Browser/blob/master/pic/device-2017-01-06-103155.png)
 ![效果图](https://github.com/Ericsongyl/S-Browser/blob/master/pic/GIF.gif)
