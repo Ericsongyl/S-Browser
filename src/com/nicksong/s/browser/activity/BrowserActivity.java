@@ -352,7 +352,7 @@ public class BrowserActivity extends Activity implements OnClickListener{
 			if (progress >= 100) {
 				progress = 100;
 				mPb.setProgress(progress);
-				mPb.setVisibility(View.INVISIBLE);
+				mPb.setVisibility(View.GONE);
 			} else {
 				if (progress >= 10) {
 					mPb.setProgress(progress);
@@ -390,7 +390,7 @@ public class BrowserActivity extends Activity implements OnClickListener{
 		public void onDownloadStart(String url, String arg1, String arg2,
 				String arg3, long arg4) {
 			// TODO Auto-generated method stub
-			
+			AppUtil.logInfo("downloadStart...");
 		}
 		
 	}

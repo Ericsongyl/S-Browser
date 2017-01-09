@@ -35,7 +35,6 @@
         <meta-data
             android:name="QBSDKAppKey"
             android:value="lwalvWFqxIkV/EuLxoNRKpUM" />
-
         <activity
             android:name="com.nicksong.s.browser.activity.BrowserActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
@@ -44,14 +43,31 @@
             android:windowSoftInputMode="stateAlwaysHidden" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:scheme="file" />
+                <data android:scheme="javascript" />
+                <data android:scheme="x" />
+                <data android:scheme="rl" />
+                <data android:scheme="about" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="http" />
+                <data android:scheme="file" />
+                <data android:scheme="https" />
+                <data android:mimeType="text/html" />
+                <data android:mimeType="text/plain" />
+                <data android:mimeType="application/xhtml+xml" />
+                <data android:mimeType="application/vnd.wap.xhtml+xml" />
             </intent-filter>
         </activity>
         <activity
