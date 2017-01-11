@@ -14,5 +14,6 @@
     <string name="menu_setting">设置</string>
     <string name="menu_about">关于</string>
     <string name="menu_power_off">退出</string>
+    <string name="app_download_manager">S浏览器下载管理器</string>
 
 </resources>

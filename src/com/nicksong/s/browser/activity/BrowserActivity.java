@@ -6,6 +6,7 @@ import java.net.URL;
 import com.nicksong.s.browser.R;
 import com.nicksong.s.browser.util.AppUtil;
 import com.nicksong.s.browser.util.Constant;
+import com.nicksong.s.browser.util.DownloadUtil;
 import com.nicksong.s.browser.view.MoreMenuPopWindow;
 import com.nicksong.s.browser.view.X5WebView;
 import com.tencent.smtt.export.external.interfaces.WebResourceResponse;
@@ -20,6 +21,7 @@ import com.tencent.smtt.utils.TbsLog;
 import com.zbar.lib.CaptureActivity;
 
 import android.app.Activity;
+import android.app.DownloadManager;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
@@ -72,6 +74,7 @@ public class BrowserActivity extends Activity implements OnClickListener{
 	private final float enable = 1.0f; //按钮透明
 	private boolean loadDone = true;
 	private long firstClickTime;
+	private DownloadUtil downloadUtil;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -391,6 +394,8 @@ public class BrowserActivity extends Activity implements OnClickListener{
 				String arg3, long arg4) {
 			// TODO Auto-generated method stub
 			AppUtil.logInfo("downloadStart...");
+			downloadUtil = new DownloadUtil(BrowserActivity.this, url);
+			downloadUtil.startDownload();
 		}
 		
 	}
